@@ -1,4 +1,11 @@
 import { GrEmoji } from "react-icons/gr";
+import {
+  MdDashboard,
+  MdFace,
+  MdAddShoppingCart,
+  MdAddchart,
+  MdSettings,
+} from "react-icons/md";
 
 export const navBarLinks = [
   {
@@ -7,11 +14,16 @@ export const navBarLinks = [
     route: "home",
     icon: <GrEmoji />,
   },
-  { id: 2, label: "Users", route: "users", icon: <GrEmoji /> },
+  { id: 2, label: "Categories", route: "categories", icon: <MdDashboard /> },
+  { id: 3, label: "Users", route: "users", icon: <MdFace /> },
 
-  { id: 3, label: "Orders", route: "Orders", icon: <GrEmoji /> },
-  { id: 4, label: "New Games", route: "new games", icon: <GrEmoji /> },
-  { id: 5, label: "All Games", route: "all games", icon: <GrEmoji /> },
-  { id: 6, label: "Categories", route: "categories", icon: <GrEmoji /> },
-  { id: 7, label: "Settings", route: "settings", icon: <GrEmoji /> },
+  { id: 4, label: "Orders", route: "orders", icon: <MdAddShoppingCart /> },
+  { id: 5, label: "Charts", route: "charts", icon: <MdAddchart /> },
+
+  {
+    id: 6,
+    label: "Settings",
+    route: "settings",
+    icon: <MdSettings />,
+  },
 ];
