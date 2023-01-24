@@ -16,4 +16,10 @@
     padding: 20px;
     height: calc(100vh - $header-height);
   }
+
+  @media screen and (max-width: 400px) {
+    .sxColumn {
+      padding: 0;
+    }
+  }
 }
