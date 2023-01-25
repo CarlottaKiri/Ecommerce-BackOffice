@@ -1,5 +1,7 @@
 import styles from "./styles.module.scss";
-import { MdReplay, MdCreate, MdDeleteSweep } from "react-icons/md";
+import { MdReplay } from "react-icons/md";
+import EditBtn from "../EditBtn";
+import DeleteBtn from "../DeleteBtn";
 
 const Table = ({ categoriesState, getData, loading }) => {
   return (
@@ -17,14 +19,15 @@ const Table = ({ categoriesState, getData, loading }) => {
             <div className={styles.itemDiv} key={item.id}>
               <p>{item.id}</p>
               <img className={styles.img} src={item.image} alt={item.name} />
-              <h4>{item.name}</h4>
+              <h4 id="title">{item.name}</h4>
               <div className={styles.buttons}>
-                <button>
-                  <MdCreate />
-                </button>
-                <button>
-                  <MdDeleteSweep />
-                </button>
+                <EditBtn
+                  id="editBtn"
+                  getData={getData}
+                  data={{ name: item.name, image: item.image, id: item.id }}
+                />
+
+                <DeleteBtn getData={getData} id={item.id} />
               </div>
             </div>
           ))}
