@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { GET } from "../../libs/HTTP";
+import { MdAdd } from "react-icons/md";
 import Modal from "../Modal";
 import styles from "./styles.module.scss";
 import Table from "../Table";
@@ -25,15 +26,17 @@ const Categories = () => {
 
   useEffect(() => {
     getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div className={styles.main}>
-      {showModal && <Modal getData={getData} setShowModal={setShowModal} />}
       <h1>Categories</h1>
+      {showModal && <Modal getData={getData} setShowModal={setShowModal} />}
       <button className={styles.addBtn} onClick={() => setShowModal(true)}>
-        Add Category
+        <MdAdd />
       </button>
+
       <Table
         categoriesState={categoriesState.categories}
         loading={categoriesState.loading}

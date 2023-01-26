@@ -5,6 +5,7 @@ import {
   MdAddShoppingCart,
   MdAddchart,
   MdSettings,
+  MdLocalOffer,
 } from "react-icons/md";
 
 export const navBarLinks = [
@@ -15,6 +16,7 @@ export const navBarLinks = [
     icon: <GrEmoji />,
   },
   { id: 2, label: "Categories", route: "categories", icon: <MdDashboard /> },
+  { id: 3, label: "Products", route: "products", icon: <MdLocalOffer /> },
   { id: 3, label: "Users", route: "users", icon: <MdFace /> },
 
   { id: 4, label: "Orders", route: "orders", icon: <MdAddShoppingCart /> },
