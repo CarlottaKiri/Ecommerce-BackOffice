@@ -22,6 +22,10 @@
   .listDiv:hover {
     cursor: pointer;
     transform: translate(1.6px);
+    color: rgb(99, 137, 218);
+  }
+  .listDiv:active {
+    color: rgb(99, 137, 218);
   }
 }
 @media screen and (max-width: 400px) {

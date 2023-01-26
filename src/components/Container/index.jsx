@@ -4,6 +4,7 @@ import styles from "./styles.module.scss";
 import Menu from "../Menu";
 import Home from "../Home";
 import Categories from "../Categories";
+import Products from "../Products";
 
 const MainContainer = () => {
   const [route, setRoute] = useState("home");
@@ -22,7 +23,7 @@ const MainContainer = () => {
         {route === "users" && <div>Users</div>}
         {route === "orders" && <div>Orders</div>}
         {route === "charts" && <div>Charts</div>}
-
+        {route === "products" && <Products />}
         {route === "categories" && <Categories />}
         {route === "settings" && <div>Settings</div>}
       </div>

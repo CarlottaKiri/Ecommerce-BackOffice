@@ -5,6 +5,7 @@ const EditModal = ({ setShowModal, data, getData }) => {
     <div className={styles.cover}>
       <div className={styles.modal}>
         <button onClick={() => setShowModal(false)}>Close</button>
+
         <CategoryForm
           data={data}
           getData={getData}

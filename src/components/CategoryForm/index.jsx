@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { POST, PUT } from "../../libs/HTTP";
-import { MdCreate } from "react-icons/md";
+import { MdCreate, MdOutlineDoneOutline } from "react-icons/md";
 import styles from "./styles.module.scss";
 
 const CategoryForm = ({ setShowModal, getData, data }) => {
@@ -18,6 +18,7 @@ const CategoryForm = ({ setShowModal, getData, data }) => {
       });
       setEdit(true);
     }
+    // eslint-disable-next-line
   }, []);
 
   const handleForm = (input, e) => {
@@ -69,7 +70,7 @@ const CategoryForm = ({ setShowModal, getData, data }) => {
           </button>
         ) : (
           <button type="submit" onClick={(e) => submitForm(e)}>
-            Done
+            <MdOutlineDoneOutline />{" "}
           </button>
         )}
       </form>
