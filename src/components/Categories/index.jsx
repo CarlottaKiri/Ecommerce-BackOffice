@@ -31,7 +31,7 @@ const Categories = () => {
 
   return (
     <div className={styles.main}>
-      <h1>Categories</h1>
+      <h1 id="categories">Categories</h1>
       {showModal && <Modal getData={getData} setShowModal={setShowModal} />}
       <button className={styles.addBtn} onClick={() => setShowModal(true)}>
         <MdAdd />
